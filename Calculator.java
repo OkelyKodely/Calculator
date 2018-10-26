@@ -14,11 +14,24 @@ import javax.swing.UIManager;
  */
 public class Calculator extends javax.swing.JFrame {
 
+    String whichNumber = "firstNumber";
+    
+    String buttonClick = "number";
+    
+    String operation = "";
+    
+    boolean operationSelected;
+    
+    double firstNumber;
+    double secondNumber;
+    double result;
+    
     /**
      * Creates new form Calculator
      */
     public Calculator() {
         initComponents();
+        setResizable(false);
     }
 
     /**
@@ -56,18 +69,36 @@ public class Calculator extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(280, 370));
         setPreferredSize(new java.awt.Dimension(280, 370));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jtxtDisplay.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
+        jtxtDisplay.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
         getContentPane().add(jtxtDisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, 50));
 
         jButton1.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton1.setText("+");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 60, 50));
 
         jButton2.setFont(new java.awt.Font("Wingdings", 1, 20)); // NOI18N
         jButton2.setText("");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 60, 50));
 
         jButton3.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton3.setText("C");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 60, 50));
 
         jButton4.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
@@ -76,6 +107,11 @@ public class Calculator extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton5.setText("7");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 60, 50));
 
         jButton6.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
@@ -128,6 +164,11 @@ public class Calculator extends javax.swing.JFrame {
 
         jButton18.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton18.setText(".");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 60, 50));
 
         jButton19.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
@@ -136,10 +177,131 @@ public class Calculator extends javax.swing.JFrame {
 
         jButton20.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton20.setText("=");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 60, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        firstNumber = 0;
+        secondNumber = 0;
+        result = 0;
+        operation = "";
+        operationSelected = false;
+        
+        jtxtDisplay.setText("");
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        if(!operationSelected) {
+            buttonClick = "number";
+            jtxtDisplay.setText(jtxtDisplay.getText() + "7");
+            whichNumber = "firstNumber";
+            try {
+                firstNumber = Double.parseDouble(jtxtDisplay.getText());
+            } catch(Exception e) {
+            }
+        } else {
+            if(buttonClick.equals("number")) {
+                jtxtDisplay.setText(jtxtDisplay.getText() + "7");
+            whichNumber = "secondNumber";
+                try {
+                    secondNumber = Double.parseDouble(jtxtDisplay.getText());
+                } catch(Exception e) {
+                }
+            }
+            if(buttonClick.equals("operation")) {
+                buttonClick = "number";
+                jtxtDisplay.setText("7");
+                whichNumber = "secondNumber";
+                try {
+                    secondNumber = Double.parseDouble(jtxtDisplay.getText());
+                } catch(Exception e) {
+                }
+            }
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        buttonClick = "operation";
+        operationSelected = true;
+        operation = "plus";
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        if(operationSelected) {
+            if(operation.equals("plus")) {
+                buttonClick = "equals";
+                operation = "";
+                operationSelected = false;
+                result = firstNumber + secondNumber;
+                jtxtDisplay.setText("" + result);
+                whichNumber = "firstNumber";
+                firstNumber = result;
+                secondNumber = 0;
+            }
+        }
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        if(!operationSelected) {
+            buttonClick = "number";
+            if(jtxtDisplay.getText().length() >= 1) {
+                if(!jtxtDisplay.getText().contains(".")) {
+                    jtxtDisplay.setText(jtxtDisplay.getText() + ".");
+                }
+            } else {
+                jtxtDisplay.setText("0.");
+            }
+            whichNumber = "firstNumber";
+            try {
+                firstNumber = Double.parseDouble(jtxtDisplay.getText());
+            } catch(Exception e) {
+            }
+        } else {
+            if(buttonClick.equals("number")) {
+                if(!jtxtDisplay.getText().contains(".")) {
+                    jtxtDisplay.setText(jtxtDisplay.getText() + ".");
+                }
+                whichNumber = "secondNumber";
+                try {
+                    secondNumber = Double.parseDouble(jtxtDisplay.getText());
+                } catch(Exception e) {
+                }
+            }
+            if(buttonClick.equals("operation")) {
+                buttonClick = "number";
+                jtxtDisplay.setText("0.");
+                whichNumber = "secondNumber";
+                try {
+                    secondNumber = Double.parseDouble(jtxtDisplay.getText());
+                } catch(Exception e) {
+                }
+            }
+        }
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        try {
+            jtxtDisplay.setText(jtxtDisplay.getText().substring(0, jtxtDisplay.getText().length() - 1));
+            try {
+                if(whichNumber.equals("firstNumber")) {
+                    firstNumber = Double.parseDouble(jtxtDisplay.getText());
+                }
+                if(whichNumber.equals("secondNumber")) {
+                    secondNumber = Double.parseDouble(jtxtDisplay.getText());
+                }
+            } catch(Exception e) {
+            }
+        } catch(Exception e) {
+            
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
