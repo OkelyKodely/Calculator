@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.io.File;
@@ -29,15 +30,15 @@ public class Calculator extends javax.swing.JFrame {
      */
     public Calculator() {
         initComponents();
-        setResizable(false);
         try {
+            bglabel.setText("");
             URL url = getClass().getResource("bg.gif");
-            JLabel l = new JLabel();
-            l.setIcon(new ImageIcon(url));
-            getContentPane().add(l, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, this.getWidth(), this.getHeight()));
-            l.setBounds(0, 0, this.getWidth(), this.getHeight());
+            bglabel.setIcon(new ImageIcon(url));
+            add(bglabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, this.getWidth(), this.getHeight()));
+            bglabel.setBounds(0, 0, this.getWidth(), this.getHeight());
         } catch(Exception e) {
         }
+        setResizable(false);
     }
 
     /**
@@ -70,9 +71,11 @@ public class Calculator extends javax.swing.JFrame {
         jButton18 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
+        bglabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("OkelyKodely's calculator");
+        setBackground(new java.awt.Color(204, 204, 204));
         setMinimumSize(new java.awt.Dimension(300, 400));
         setPreferredSize(new java.awt.Dimension(300, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -252,14 +255,18 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 60, 50));
 
-        jButton20.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
-        jButton20.setText("=");
+        jButton20.setBackground(java.awt.Color.green);
+        jButton20.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
+        jButton20.setText("exe");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton20ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 60, 50));
+
+        bglabel.setText("jLabel1");
+        getContentPane().add(bglabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -512,6 +519,7 @@ public class Calculator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel bglabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
