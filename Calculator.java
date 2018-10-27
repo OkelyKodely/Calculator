@@ -1,30 +1,21 @@
 import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.io.File;
 import java.net.URL;
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 public class Calculator extends javax.swing.JFrame {
 
-    String whichNumber = "firstNumber";
+    private String whichNumber = "firstNumber";
+    private String buttonClick = "number";
+    private String operation = "";
     
-    String buttonClick = "number";
+    private double firstNumber;
+    private double secondNumber;
+    private double result;
     
-    String operation = "";
-    
-    boolean operationSelected;
-    
-    double firstNumber;
-    double secondNumber;
-    double result;
-    
-    Image bg;
-    
+    private boolean operationSelected;
+
     /**
      * Creates new form Calculator
      */
@@ -32,6 +23,8 @@ public class Calculator extends javax.swing.JFrame {
 
         initComponents();
 
+        this.setTitle("");
+        
         jtxtDisplay.setEnabled(false);
         jtxtDisplay.setDisabledTextColor(Color.WHITE);
 
@@ -86,7 +79,7 @@ public class Calculator extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(300, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jtxtDisplay.setBackground(java.awt.Color.blue);
+        jtxtDisplay.setBackground(new java.awt.Color(0, 0, 0));
         jtxtDisplay.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
         jtxtDisplay.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
         getContentPane().add(jtxtDisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 270, 50));
@@ -115,7 +108,7 @@ public class Calculator extends javax.swing.JFrame {
 
         jButton3.setBackground(java.awt.Color.yellow);
         jButton3.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setForeground(new java.awt.Color(105, 50, 33));
         jButton3.setText("C");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -276,7 +269,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton17ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 60, 50));
+        getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 60, 50));
 
         jButton18.setBackground(java.awt.Color.blue);
         jButton18.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
@@ -287,7 +280,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton18ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 60, 50));
+        getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 60, 50));
 
         jButton19.setBackground(java.awt.Color.blue);
         jButton19.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
@@ -317,9 +310,11 @@ public class Calculator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
         firstNumber = 0;
         secondNumber = 0;
         result = 0;
+
         operation = "";
         operationSelected = false;
         
@@ -327,6 +322,7 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void getNumber(String num) {
+
         if(!operationSelected) {
             buttonClick = "number";
             jtxtDisplay.setText(jtxtDisplay.getText() + num);
@@ -357,16 +353,20 @@ public class Calculator extends javax.swing.JFrame {
     }
     
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+
         getNumber("7");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
         buttonClick = "operation";
+
         operationSelected = true;
         operation = "plus";
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+
         if(operationSelected) {
             if(operation.equals("plus")) {
                 buttonClick = "equals";
@@ -418,6 +418,7 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+
         if(!operationSelected) {
             buttonClick = "number";
             if(jtxtDisplay.getText().length() >= 1) {
@@ -456,88 +457,101 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
         try {
             jtxtDisplay.setText(jtxtDisplay.getText().substring(0, jtxtDisplay.getText().length() - 1));
-            try {
-                if(whichNumber.equals("firstNumber")) {
-                    firstNumber = Double.parseDouble(jtxtDisplay.getText());
-                }
-                if(whichNumber.equals("secondNumber")) {
-                    secondNumber = Double.parseDouble(jtxtDisplay.getText());
-                }
-            } catch(Exception e) {
+            if(whichNumber.equals("firstNumber")) {
+                firstNumber = Double.parseDouble(jtxtDisplay.getText());
+            } else if(whichNumber.equals("secondNumber")) {
+                secondNumber = Double.parseDouble(jtxtDisplay.getText());
             }
         } catch(Exception e) {
-            
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+
         buttonClick = "operation";
+
         operationSelected = true;
         operation = "minus";
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+
         getNumber("8");
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+
         getNumber("9");
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+
         getNumber("4");
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+
         getNumber("5");
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+
         getNumber("6");
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+
         getNumber("1");
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+
         getNumber("2");
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+
         getNumber("3");
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+
         getNumber("0");
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+
         buttonClick = "operation";
+
         operationSelected = true;
         operation = "times";
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+
         buttonClick = "operation";
+
         operationSelected = true;
         operation = "divide";
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+
         buttonClick = "operation";
+
         operationSelected = true;
         operation = "percent";
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+
         if(whichNumber.equals("firstNumber")) {
             firstNumber *= -1;
             jtxtDisplay.setText("" + firstNumber);
-        }
-        if(whichNumber.equals("secondNumber")) {
+        } else if(whichNumber.equals("secondNumber")) {
             secondNumber *= -1;
             jtxtDisplay.setText("" + secondNumber);
         }
@@ -548,6 +562,7 @@ public class Calculator extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         
+        /* For round buttons.. */
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
