@@ -1,17 +1,13 @@
-
+import java.awt.Graphics;
+import java.awt.Image;
+import java.io.File;
+import java.net.URL;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author dhcho
- */
 public class Calculator extends javax.swing.JFrame {
 
     String whichNumber = "firstNumber";
@@ -26,12 +22,22 @@ public class Calculator extends javax.swing.JFrame {
     double secondNumber;
     double result;
     
+    Image bg;
+    
     /**
      * Creates new form Calculator
      */
     public Calculator() {
         initComponents();
         setResizable(false);
+        try {
+            URL url = getClass().getResource("bg.gif");
+            JLabel l = new JLabel();
+            l.setIcon(new ImageIcon(url));
+            getContentPane().add(l, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, this.getWidth(), this.getHeight()));
+            l.setBounds(0, 0, this.getWidth(), this.getHeight());
+        } catch(Exception e) {
+        }
     }
 
     /**
@@ -66,7 +72,7 @@ public class Calculator extends javax.swing.JFrame {
         jButton20 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Calculator");
+        setTitle("OkelyKodely's calculator");
         setMinimumSize(new java.awt.Dimension(300, 400));
         setPreferredSize(new java.awt.Dimension(300, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
