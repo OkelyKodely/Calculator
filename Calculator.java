@@ -66,13 +66,13 @@ public class Calculator extends javax.swing.JFrame {
         jButton20 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(280, 370));
-        setPreferredSize(new java.awt.Dimension(280, 370));
+        setMinimumSize(new java.awt.Dimension(300, 370));
+        setPreferredSize(new java.awt.Dimension(300, 370));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jtxtDisplay.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
         jtxtDisplay.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
-        getContentPane().add(jtxtDisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, 50));
+        getContentPane().add(jtxtDisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 270, 50));
 
         jButton1.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton1.setText("+");
@@ -81,7 +81,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 60, 50));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 60, 50));
 
         jButton2.setFont(new java.awt.Font("Wingdings", 1, 20)); // NOI18N
         jButton2.setText("");
@@ -99,11 +99,16 @@ public class Calculator extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 60, 50));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 60, 50));
 
         jButton4.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton4.setText("%");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 60, 50));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 60, 50));
 
         jButton5.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton5.setText("7");
@@ -116,50 +121,110 @@ public class Calculator extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton6.setText("8");
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 60, 50));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 60, 50));
 
         jButton7.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton7.setText("9");
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 60, 50));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 60, 50));
 
         jButton8.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton8.setText("-");
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 60, 50));
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 60, 50));
 
         jButton9.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton9.setText("4");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 60, 50));
 
         jButton10.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton10.setText("5");
-        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 60, 50));
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 60, 50));
 
         jButton11.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton11.setText("6");
-        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 60, 50));
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 60, 50));
 
         jButton12.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton12.setText("*");
-        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 60, 50));
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 60, 50));
 
         jButton13.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton13.setText("1");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 60, 50));
 
         jButton14.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton14.setText("2");
-        getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 60, 50));
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 60, 50));
 
         jButton15.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton15.setText("3");
-        getContentPane().add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 60, 50));
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 60, 50));
 
         jButton16.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton16.setText("/");
-        getContentPane().add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 60, 50));
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 60, 50));
 
         jButton17.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton17.setText("0");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 60, 50));
 
         jButton18.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
@@ -169,11 +234,16 @@ public class Calculator extends javax.swing.JFrame {
                 jButton18ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 60, 50));
+        getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 60, 50));
 
         jButton19.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton19.setText("±");
-        getContentPane().add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 60, 50));
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 60, 50));
 
         jButton20.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton20.setText("=");
@@ -182,7 +252,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton20ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 60, 50));
+        getContentPane().add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 60, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -197,10 +267,10 @@ public class Calculator extends javax.swing.JFrame {
         jtxtDisplay.setText("");
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void getNumber(String num) {
         if(!operationSelected) {
             buttonClick = "number";
-            jtxtDisplay.setText(jtxtDisplay.getText() + "7");
+            jtxtDisplay.setText(jtxtDisplay.getText() + num);
             whichNumber = "firstNumber";
             try {
                 firstNumber = Double.parseDouble(jtxtDisplay.getText());
@@ -208,8 +278,8 @@ public class Calculator extends javax.swing.JFrame {
             }
         } else {
             if(buttonClick.equals("number")) {
-                jtxtDisplay.setText(jtxtDisplay.getText() + "7");
-            whichNumber = "secondNumber";
+                jtxtDisplay.setText(jtxtDisplay.getText() + num);
+                whichNumber = "secondNumber";
                 try {
                     secondNumber = Double.parseDouble(jtxtDisplay.getText());
                 } catch(Exception e) {
@@ -217,7 +287,7 @@ public class Calculator extends javax.swing.JFrame {
             }
             if(buttonClick.equals("operation")) {
                 buttonClick = "number";
-                jtxtDisplay.setText("7");
+                jtxtDisplay.setText(num);
                 whichNumber = "secondNumber";
                 try {
                     secondNumber = Double.parseDouble(jtxtDisplay.getText());
@@ -225,6 +295,10 @@ public class Calculator extends javax.swing.JFrame {
                 }
             }
         }
+    }
+    
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        getNumber("7");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -240,6 +314,42 @@ public class Calculator extends javax.swing.JFrame {
                 operation = "";
                 operationSelected = false;
                 result = firstNumber + secondNumber;
+                jtxtDisplay.setText("" + result);
+                whichNumber = "firstNumber";
+                firstNumber = result;
+                secondNumber = 0;
+            } else if(operation.equals("minus")) {
+                buttonClick = "equals";
+                operation = "";
+                operationSelected = false;
+                result = firstNumber - secondNumber;
+                jtxtDisplay.setText("" + result);
+                whichNumber = "firstNumber";
+                firstNumber = result;
+                secondNumber = 0;
+            } else if(operation.equals("times")) {
+                buttonClick = "equals";
+                operation = "";
+                operationSelected = false;
+                result = firstNumber * secondNumber;
+                jtxtDisplay.setText("" + result);
+                whichNumber = "firstNumber";
+                firstNumber = result;
+                secondNumber = 0;
+            } else if(operation.equals("divide")) {
+                buttonClick = "equals";
+                operation = "";
+                operationSelected = false;
+                result = firstNumber / secondNumber;
+                jtxtDisplay.setText("" + result);
+                whichNumber = "firstNumber";
+                firstNumber = result;
+                secondNumber = 0;
+            } else if(operation.equals("percent")) {
+                buttonClick = "equals";
+                operation = "";
+                operationSelected = false;
+                result = firstNumber * (secondNumber / 100);
                 jtxtDisplay.setText("" + result);
                 whichNumber = "firstNumber";
                 firstNumber = result;
@@ -302,6 +412,77 @@ public class Calculator extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        buttonClick = "operation";
+        operationSelected = true;
+        operation = "minus";
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        getNumber("8");
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        getNumber("9");
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        getNumber("4");
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        getNumber("5");
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        getNumber("6");
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        getNumber("1");
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        getNumber("2");
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        getNumber("3");
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        getNumber("0");
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        buttonClick = "operation";
+        operationSelected = true;
+        operation = "times";
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        buttonClick = "operation";
+        operationSelected = true;
+        operation = "divide";
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        buttonClick = "operation";
+        operationSelected = true;
+        operation = "percent";
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        if(whichNumber.equals("firstNumber")) {
+            firstNumber *= -1;
+            jtxtDisplay.setText("" + firstNumber);
+        }
+        if(whichNumber.equals("secondNumber")) {
+            secondNumber *= -1;
+            jtxtDisplay.setText("" + secondNumber);
+        }
+    }//GEN-LAST:event_jButton19ActionPerformed
 
     /**
      * @param args the command line arguments
