@@ -66,8 +66,9 @@ public class Calculator extends javax.swing.JFrame {
         jButton20 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(300, 370));
-        setPreferredSize(new java.awt.Dimension(300, 370));
+        setTitle("Calculator");
+        setMinimumSize(new java.awt.Dimension(300, 400));
+        setPreferredSize(new java.awt.Dimension(300, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jtxtDisplay.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
@@ -117,7 +118,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 60, 50));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 60, 50));
 
         jButton6.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton6.setText("8");
@@ -126,7 +127,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 60, 50));
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 60, 50));
 
         jButton7.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton7.setText("9");
@@ -135,7 +136,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 60, 50));
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 60, 50));
 
         jButton8.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton8.setText("-");
@@ -144,7 +145,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 60, 50));
+        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 60, 50));
 
         jButton9.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton9.setText("4");
@@ -153,7 +154,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 60, 50));
+        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 60, 50));
 
         jButton10.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton10.setText("5");
@@ -162,7 +163,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton10ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 60, 50));
+        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 60, 50));
 
         jButton11.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton11.setText("6");
@@ -171,7 +172,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton11ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 60, 50));
+        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 60, 50));
 
         jButton12.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton12.setText("*");
@@ -180,7 +181,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton12ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 60, 50));
+        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 60, 50));
 
         jButton13.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton13.setText("1");
@@ -189,7 +190,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton13ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 60, 50));
+        getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 60, 50));
 
         jButton14.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton14.setText("2");
@@ -198,7 +199,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton14ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 60, 50));
+        getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 60, 50));
 
         jButton15.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton15.setText("3");
@@ -207,7 +208,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton15ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 60, 50));
+        getContentPane().add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 60, 50));
 
         jButton16.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton16.setText("/");
@@ -216,7 +217,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton16ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 60, 50));
+        getContentPane().add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 60, 50));
 
         jButton17.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton17.setText("0");
@@ -225,7 +226,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton17ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 60, 50));
+        getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 60, 50));
 
         jButton18.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton18.setText(".");
@@ -234,7 +235,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton18ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 60, 50));
+        getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 60, 50));
 
         jButton19.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton19.setText("±");
@@ -243,7 +244,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton19ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 60, 50));
+        getContentPane().add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 60, 50));
 
         jButton20.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton20.setText("=");
@@ -252,7 +253,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton20ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 60, 50));
+        getContentPane().add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 60, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
