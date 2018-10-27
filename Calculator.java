@@ -33,8 +33,7 @@ public class Calculator extends javax.swing.JFrame {
         initComponents();
 
         jtxtDisplay.setEnabled(false);
-        jtxtDisplay.setBackground(Color.WHITE);
-        jtxtDisplay.setDisabledTextColor(Color.BLACK);
+        jtxtDisplay.setDisabledTextColor(Color.WHITE);
 
         try {
             bglabel.setText("");
@@ -87,7 +86,7 @@ public class Calculator extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(300, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jtxtDisplay.setBackground(new java.awt.Color(191, 240, 254));
+        jtxtDisplay.setBackground(java.awt.Color.blue);
         jtxtDisplay.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
         jtxtDisplay.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
         getContentPane().add(jtxtDisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 270, 50));
@@ -101,9 +100,9 @@ public class Calculator extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 60, 50));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 60, 50));
 
-        jButton2.setBackground(java.awt.Color.blue);
+        jButton2.setBackground(java.awt.Color.red);
         jButton2.setFont(new java.awt.Font("Wingdings", 1, 20)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("");
@@ -114,7 +113,7 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 60, 50));
 
-        jButton3.setBackground(java.awt.Color.blue);
+        jButton3.setBackground(java.awt.Color.yellow);
         jButton3.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("C");
@@ -178,7 +177,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 60, 50));
+        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 60, 50));
 
         jButton9.setBackground(java.awt.Color.blue);
         jButton9.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
@@ -222,7 +221,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton12ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 60, 50));
+        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 60, 50));
 
         jButton13.setBackground(java.awt.Color.blue);
         jButton13.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
@@ -266,7 +265,7 @@ public class Calculator extends javax.swing.JFrame {
                 jButton16ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 60, 50));
+        getContentPane().add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 60, 50));
 
         jButton17.setBackground(java.awt.Color.blue);
         jButton17.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
@@ -303,7 +302,7 @@ public class Calculator extends javax.swing.JFrame {
 
         jButton20.setBackground(java.awt.Color.green);
         jButton20.setFont(new java.awt.Font("Monospaced", 1, 15)); // NOI18N
-        jButton20.setText("exe");
+        jButton20.setText("=");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton20ActionPerformed(evt);
@@ -313,8 +312,6 @@ public class Calculator extends javax.swing.JFrame {
 
         bglabel.setText("jLabel1");
         getContentPane().add(bglabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        getAccessibleContext().setAccessibleName("OkelyKodely's Calculator");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
