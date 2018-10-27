@@ -29,7 +29,13 @@ public class Calculator extends javax.swing.JFrame {
      * Creates new form Calculator
      */
     public Calculator() {
+
         initComponents();
+
+        jtxtDisplay.setEnabled(false);
+        jtxtDisplay.setBackground(Color.WHITE);
+        jtxtDisplay.setDisabledTextColor(Color.BLACK);
+
         try {
             bglabel.setText("");
             URL url = getClass().getResource("bg.gif");
@@ -38,6 +44,7 @@ public class Calculator extends javax.swing.JFrame {
             bglabel.setBounds(0, 0, this.getWidth(), this.getHeight());
         } catch(Exception e) {
         }
+
         setResizable(false);
     }
 
@@ -74,17 +81,20 @@ public class Calculator extends javax.swing.JFrame {
         bglabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("OkelyKodely's calculator");
+        setTitle("OkelyKodely's Calculator");
         setBackground(new java.awt.Color(204, 204, 204));
         setMinimumSize(new java.awt.Dimension(300, 400));
         setPreferredSize(new java.awt.Dimension(300, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jtxtDisplay.setBackground(new java.awt.Color(191, 240, 254));
         jtxtDisplay.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
         jtxtDisplay.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
         getContentPane().add(jtxtDisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 270, 50));
 
+        jButton1.setBackground(java.awt.Color.blue);
         jButton1.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("+");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +103,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 60, 50));
 
+        jButton2.setBackground(java.awt.Color.blue);
         jButton2.setFont(new java.awt.Font("Wingdings", 1, 20)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,7 +114,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 60, 50));
 
+        jButton3.setBackground(java.awt.Color.blue);
         jButton3.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("C");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +125,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 60, 50));
 
+        jButton4.setBackground(java.awt.Color.blue);
         jButton4.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("%");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +136,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 60, 50));
 
+        jButton5.setBackground(java.awt.Color.blue);
         jButton5.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("7");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,7 +147,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 60, 50));
 
+        jButton6.setBackground(java.awt.Color.blue);
         jButton6.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("8");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,7 +158,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 60, 50));
 
+        jButton7.setBackground(java.awt.Color.blue);
         jButton7.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("9");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +169,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 60, 50));
 
+        jButton8.setBackground(java.awt.Color.blue);
         jButton8.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(255, 255, 255));
         jButton8.setText("-");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,7 +180,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 60, 50));
 
+        jButton9.setBackground(java.awt.Color.blue);
         jButton9.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(255, 255, 255));
         jButton9.setText("4");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,7 +191,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 60, 50));
 
+        jButton10.setBackground(java.awt.Color.blue);
         jButton10.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(255, 255, 255));
         jButton10.setText("5");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,7 +202,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 60, 50));
 
+        jButton11.setBackground(java.awt.Color.blue);
         jButton11.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton11.setForeground(new java.awt.Color(255, 255, 255));
         jButton11.setText("6");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,7 +213,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 60, 50));
 
+        jButton12.setBackground(java.awt.Color.blue);
         jButton12.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton12.setForeground(new java.awt.Color(255, 255, 255));
         jButton12.setText("*");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,7 +224,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 60, 50));
 
+        jButton13.setBackground(java.awt.Color.blue);
         jButton13.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton13.setForeground(new java.awt.Color(255, 255, 255));
         jButton13.setText("1");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,7 +235,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 60, 50));
 
+        jButton14.setBackground(java.awt.Color.blue);
         jButton14.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton14.setForeground(new java.awt.Color(255, 255, 255));
         jButton14.setText("2");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -210,7 +246,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 60, 50));
 
+        jButton15.setBackground(java.awt.Color.blue);
         jButton15.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton15.setForeground(new java.awt.Color(255, 255, 255));
         jButton15.setText("3");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,7 +257,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 60, 50));
 
+        jButton16.setBackground(java.awt.Color.blue);
         jButton16.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton16.setForeground(new java.awt.Color(255, 255, 255));
         jButton16.setText("/");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,7 +268,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 60, 50));
 
+        jButton17.setBackground(java.awt.Color.blue);
         jButton17.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton17.setForeground(new java.awt.Color(255, 255, 255));
         jButton17.setText("0");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -237,7 +279,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 60, 50));
 
+        jButton18.setBackground(java.awt.Color.blue);
         jButton18.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton18.setForeground(new java.awt.Color(255, 255, 255));
         jButton18.setText(".");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -246,7 +290,9 @@ public class Calculator extends javax.swing.JFrame {
         });
         getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 60, 50));
 
+        jButton19.setBackground(java.awt.Color.blue);
         jButton19.setFont(new java.awt.Font("Monospaced", 1, 20)); // NOI18N
+        jButton19.setForeground(new java.awt.Color(255, 255, 255));
         jButton19.setText("±");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,6 +313,8 @@ public class Calculator extends javax.swing.JFrame {
 
         bglabel.setText("jLabel1");
         getContentPane().add(bglabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        getAccessibleContext().setAccessibleName("OkelyKodely's Calculator");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
